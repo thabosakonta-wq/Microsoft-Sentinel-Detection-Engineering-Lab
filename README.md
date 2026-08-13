@@ -10,16 +10,16 @@ This project demonstrates the development and documentation of security monitori
 
 The portfolio focuses on identifying and investigating:
 
-- Windows authentication failures
-- Potential brute-force and password-spraying activity
-- Process creation and execution activity
-- PowerShell execution
-- Command and scripting activity
-- Suspicious command-line behaviour
-- Parent-child process relationships
-- MITRE ATT&CK techniques
-- Potential false positives
-- SOC investigation workflows
+* Windows authentication failures
+* Potential brute-force and password-spraying activity
+* Process creation and execution activity
+* PowerShell execution
+* Command and scripting activity
+* Suspicious command-line behaviour
+* Parent-child process relationships
+* MITRE ATT&CK techniques
+* Potential false positives
+* SOC investigation workflows
 
 The objective is to demonstrate practical SOC analyst and detection engineering methodology rather than simply presenting isolated KQL queries.
 
@@ -29,18 +29,18 @@ The objective is to demonstrate practical SOC analyst and detection engineering 
 
 The project demonstrates the ability to:
 
-- Develop KQL-based security detection rules
-- Create proactive threat-hunting queries
-- Analyse Windows authentication telemetry
-- Monitor Windows process creation events
-- Investigate PowerShell activity
-- Analyse command-line execution
-- Identify potentially suspicious execution patterns
-- Map detection coverage to MITRE ATT&CK
-- Apply structured SOC investigation workflows
-- Document detection logic
-- Identify potential false positives
-- Communicate security findings in an analyst-oriented format
+* Develop KQL-based security detection rules
+* Create proactive threat-hunting queries
+* Analyse Windows authentication telemetry
+* Monitor Windows process creation events
+* Investigate PowerShell activity
+* Analyse command-line execution
+* Identify potentially suspicious execution patterns
+* Map detection coverage to MITRE ATT&CK
+* Apply structured SOC investigation workflows
+* Document detection logic
+* Identify potential false positives
+* Communicate security findings in an analyst-oriented format
 
 ---
 
@@ -56,12 +56,12 @@ Detects failed Windows authentication attempts that may require investigation.
 
 Investigation areas include:
 
-- Repeated authentication failures
-- Potential brute-force activity
-- Potential password spraying
-- Suspicious source addresses
-- Account-related anomalies
-- Authentication abuse
+* Repeated authentication failures
+* Potential brute-force activity
+* Potential password spraying
+* Suspicious source addresses
+* Account-related anomalies
+* Authentication abuse
 
 **File:**
 
@@ -77,14 +77,14 @@ Monitors Windows process creation telemetry to identify potentially suspicious e
 
 Investigation areas include:
 
-- New process execution
-- Process command lines
-- Parent-child process relationships
-- Unusual executable paths
-- PowerShell execution
-- Command interpreters
-- Suspicious processes
-- Processes executed by unusual accounts
+* New process execution
+* Process command lines
+* Parent-child process relationships
+* Unusual executable paths
+* PowerShell execution
+* Command interpreters
+* Suspicious processes
+* Processes executed by unusual accounts
 
 **File:**
 
@@ -98,12 +98,12 @@ Monitors PowerShell execution and command-line activity that may warrant further
 
 Investigation areas include:
 
-- PowerShell execution
-- Suspicious command-line arguments
-- Encoded or unusual execution patterns
-- Potential post-compromise activity
-- Administrative PowerShell activity
-- False-positive validation
+* PowerShell execution
+* Suspicious command-line arguments
+* Encoded or unusual execution patterns
+* Potential post-compromise activity
+* Administrative PowerShell activity
+* False-positive validation
 
 **File:**
 
@@ -121,13 +121,13 @@ The project also contains proactive threat-hunting queries designed to investiga
 
 Investigates authentication failures for patterns associated with:
 
-- Brute-force activity
-- Password spraying
-- Credential misuse
-- Multiple accounts targeted from a common source
-- Unusual authentication times
-- Suspicious logon types
-- Authentication failures followed by successful logons
+* Brute-force activity
+* Password spraying
+* Credential misuse
+* Multiple accounts targeted from a common source
+* Unusual authentication times
+* Suspicious logon types
+* Authentication failures followed by successful logons
 
 **File:**
 
@@ -143,14 +143,14 @@ Investigates process creation telemetry for potentially suspicious execution.
 
 Investigation areas include:
 
-- PowerShell execution
-- Command prompt execution
-- Scripting engines
-- Suspicious command-line arguments
-- Unusual executable paths
-- Temporary directory execution
-- Unexpected parent-child relationships
-- Processes launched by unusual accounts
+* PowerShell execution
+* Command prompt execution
+* Scripting engines
+* Suspicious command-line arguments
+* Unusual executable paths
+* Temporary directory execution
+* Unexpected parent-child relationships
+* Processes launched by unusual accounts
 
 **File:**
 
@@ -164,12 +164,12 @@ Provides proactive hunting for PowerShell activity that may warrant further inve
 
 Investigation areas include:
 
-- PowerShell execution
-- Suspicious command-line activity
-- Unusual execution patterns
-- Potentially encoded commands
-- Administrative versus suspicious activity
-- Correlation with other endpoint telemetry
+* PowerShell execution
+* Suspicious command-line activity
+* Unusual execution patterns
+* Potentially encoded commands
+* Administrative versus suspicious activity
+* Correlation with other endpoint telemetry
 
 **File:**
 
@@ -181,13 +181,13 @@ Investigation areas include:
 
 The current detection and hunting content is mapped to the following MITRE ATT&CK techniques:
 
-| Technique | Name | Project Coverage |
-|---|---|---|
-| T1059 | Command and Scripting Interpreter | PowerShell and process creation monitoring |
-| T1059.001 | PowerShell | PowerShell detection and hunting |
-| T1059.003 | Windows Command Shell | Process creation monitoring and hunting |
-| T1110 | Brute Force | Failed authentication detection and hunting |
-| T1110.003 | Password Spraying | Failed authentication detection and hunting |
+| Technique | Name                              | Project Coverage                            |
+| --------- | --------------------------------- | ------------------------------------------- |
+| T1059     | Command and Scripting Interpreter | PowerShell and process creation monitoring  |
+| T1059.001 | PowerShell                        | PowerShell detection and hunting            |
+| T1059.003 | Windows Command Shell             | Process creation monitoring and hunting     |
+| T1110     | Brute Force                       | Failed authentication detection and hunting |
+| T1110.003 | Password Spraying                 | Failed authentication detection and hunting |
 
 These mappings describe the techniques represented by the detection and hunting content.
 
@@ -229,22 +229,22 @@ Potential false positives include:
 
 ### Authentication
 
-- Incorrect passwords
-- Expired credentials
-- Cached credentials
-- Service accounts
-- User error
-- Misconfigured applications
+* Incorrect passwords
+* Expired credentials
+* Cached credentials
+* Service accounts
+* User error
+* Misconfigured applications
 
 ### Process Creation
 
-- Normal administrative activity
-- Software installation
-- System maintenance
-- Automated scripts
-- Scheduled tasks
-- Legitimate PowerShell administration
-- Security software activity
+* Normal administrative activity
+* Software installation
+* System maintenance
+* Automated scripts
+* Scheduled tasks
+* Legitimate PowerShell administration
+* Security software activity
 
 A detection should therefore be investigated in context rather than treated as proof of malicious activity.
 
@@ -256,31 +256,31 @@ The project primarily uses Windows security telemetry represented through Micros
 
 Examples include:
 
-- Windows Security Event Log
-- Event ID `4625` — Failed Logon
-- Event ID `4688` — Process Creation
-- Microsoft Sentinel `SecurityEvent`
-- Process command-line telemetry
-- Authentication telemetry
+* Windows Security Event Log
+* Event ID `4625` — Failed Logon
+* Event ID `4688` — Process Creation
+* Microsoft Sentinel `SecurityEvent`
+* Process command-line telemetry
+* Authentication telemetry
 
 ---
 
 ## Technologies and Concepts
 
-- Microsoft Sentinel
-- Kusto Query Language (KQL)
-- Windows Security Event Logs
-- Windows authentication telemetry
-- Process creation telemetry
-- PowerShell
-- Windows Command Shell
-- MITRE ATT&CK
-- Threat hunting
-- Detection engineering
-- SOC investigation methodology
-- False-positive analysis
-- Security monitoring
-- Analyst-oriented technical documentation
+* Microsoft Sentinel
+* Kusto Query Language (KQL)
+* Windows Security Event Logs
+* Windows authentication telemetry
+* Process creation telemetry
+* PowerShell
+* Windows Command Shell
+* MITRE ATT&CK
+* Threat hunting
+* Detection engineering
+* SOC investigation methodology
+* False-positive analysis
+* Security monitoring
+* Analyst-oriented technical documentation
 
 ---
 
@@ -303,6 +303,9 @@ Microsoft-Sentinel-Detection-Engineering-Lab/
 │   ├── Failed-Logon-Alert-Tuning.md
 │   └── Suspicious-PowerShell-Incident.md
 │
+├── Playbooks/
+│   └── Automated-Host-Isolation.md
+│
 ├── MITRE-Mapping/
 │   └── Detection-Mapping.md
 │
@@ -310,73 +313,93 @@ Microsoft-Sentinel-Detection-Engineering-Lab/
 └── LICENSE
 ```
 
+---
+
 ## Skills Demonstrated
 
 This portfolio demonstrates practical exposure to:
 
-Security detection development
-KQL query development
-Threat hunting
-Windows security telemetry analysis
-Authentication investigation
-Process execution analysis
-PowerShell security monitoring
-Command-line analysis
-MITRE ATT&CK mapping
-SOC investigation methodology
-Detection documentation
-False-positive analysis
-Analyst-oriented technical communication
-Lab Scope
+* Security detection development
+* KQL query development
+* Threat hunting
+* Windows security telemetry analysis
+* Authentication investigation
+* Process execution analysis
+* PowerShell security monitoring
+* Command-line analysis
+* MITRE ATT&CK mapping
+* SOC investigation methodology
+* Detection documentation
+* False-positive analysis
+* Analyst-oriented technical communication
+* SOAR playbook design
+* Automated endpoint containment concepts
+
+---
+
+## Lab Scope
 
 This repository represents a detection engineering and threat-hunting portfolio/lab.
 
-The documented detections and hunting queries demonstrate security monitoring concepts, analytical methodology, and detection engineering practices.
+The documented detections, hunting queries, investigation workflows, and SOAR playbook design demonstrate security monitoring concepts, analytical methodology, and detection engineering practices.
 
 The project does not claim that the documented techniques represent confirmed malicious activity.
 
+The automated host isolation playbook is a documented SOAR design demonstrating how Microsoft Sentinel and Microsoft Defender for Endpoint could be integrated for automated containment. It does not claim that live endpoint isolation was performed as part of this portfolio.
+
+---
+
 ## Current Project Coverage
 
-| Area | Status |
-| :--- | :--- |
-| Detection Rules | Complete |
-| Threat Hunting Queries | Complete |
-| MITRE ATT&CK Mapping | Complete |
-| SOC Incident Case Studies | Complete |
-| Repository Documentation | Complete |
-| GitHub Repository | Published |
+| Area                      | Status    |
+| ------------------------- | --------- |
+| Detection Rules           | Complete  |
+| Threat Hunting Queries    | Complete  |
+| MITRE ATT&CK Mapping      | Complete  |
+| SOC Incident Case Studies | Complete  |
+| SOAR Playbooks            | Complete  |
+| Repository Documentation  | Complete  |
+| GitHub Repository         | Published |
 
+---
 
 ## Future Development
 
 Potential future extensions include:
 
-SOC incident case studies
-Investigation timelines
-Additional detection rules
-Additional threat-hunting scenarios
-Microsoft Sentinel analytics-rule documentation
-Detection tuning
-False-positive analysis
-Security investigation evidence
-Incident response documentation
-Detection validation scenarios
-Security monitoring architecture documentation
-KQL query optimisation
-Additional MITRE ATT&CK coverage
+* Additional SOC incident case studies
+* Investigation timelines
+* Additional detection rules
+* Additional threat-hunting scenarios
+* Microsoft Sentinel analytics-rule documentation
+* Detection tuning
+* False-positive analysis
+* Security investigation evidence
+* Incident response documentation
+* Detection validation scenarios
+* Security monitoring architecture documentation
+* KQL query optimisation
+* Additional MITRE ATT&CK coverage
+* Additional SOAR automation scenarios
+* Automated alert enrichment
+* Incident severity and risk scoring
+
+---
 
 ## Portfolio Disclaimer
 
 This repository is a technical portfolio and lab environment.
 
-The detection rules, hunting queries, and MITRE ATT&CK mappings are intended to demonstrate security monitoring and analytical methodology.
+The detection rules, hunting queries, investigation workflows, SOAR playbook design, and MITRE ATT&CK mappings are intended to demonstrate security monitoring and analytical methodology.
 
 The presence of a detection or MITRE ATT&CK mapping does not indicate that malicious activity was actually observed.
 
+---
+
 ## Author
 
-Thabo Sakonta
+**Thabo Sakonta**
 
 Cybersecurity / SOC / Detection Engineering Portfolio
 
-Project: Microsoft Sentinel Detection Engineering Lab
+**Project:** Microsoft Sentinel Detection Engineering Lab
