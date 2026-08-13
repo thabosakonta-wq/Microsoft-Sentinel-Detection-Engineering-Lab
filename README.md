@@ -299,6 +299,10 @@ Microsoft-Sentinel-Detection-Engineering-Lab/
 │   ├── Process-Creation-Hunting.md
 │   └── Suspicious-PowerShell-Hunting.md
 │
+├── Investigation-Reports/
+│   ├── Failed-Logon-Alert-Tuning.md
+│   └── Suspicious-PowerShell-Incident.md
+│
 ├── MITRE-Mapping/
 │   └── Detection-Mapping.md
 │
@@ -334,14 +338,14 @@ The project does not claim that the documented techniques represent confirmed ma
 ## Current Project Coverage
 
 | Area | Status |
-|---|---|
+| :--- | :--- |
 | Detection Rules | Complete |
 | Threat Hunting Queries | Complete |
 | MITRE ATT&CK Mapping | Complete |
-| SOC Investigation Workflow | Documented |
-| False Positive Considerations | Documented |
+| SOC Incident Case Studies | Complete |
 | Repository Documentation | Complete |
 | GitHub Repository | Published |
+
 
 ## Future Development
 
