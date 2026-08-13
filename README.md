@@ -304,8 +304,9 @@ Microsoft-Sentinel-Detection-Engineering-Lab/
 │
 ├── README.md
 └── LICENSE
+```
 
-Skills Demonstrated
+## Skills Demonstrated
 
 This portfolio demonstrates practical exposure to:
 
@@ -330,16 +331,19 @@ The documented detections and hunting queries demonstrate security monitoring co
 
 The project does not claim that the documented techniques represent confirmed malicious activity.
 
-Current Project Coverage
-Area	Status
-Detection Rules	Complete
-Threat Hunting Queries	Complete
-MITRE ATT&CK Mapping	Complete
-SOC Investigation Workflow	Documented
-False Positive Considerations	Documented
-Repository Documentation	Complete
-GitHub Repository	Published
-Future Development
+## Current Project Coverage
+
+| Area | Status |
+|---|---|
+| Detection Rules | Complete |
+| Threat Hunting Queries | Complete |
+| MITRE ATT&CK Mapping | Complete |
+| SOC Investigation Workflow | Documented |
+| False Positive Considerations | Documented |
+| Repository Documentation | Complete |
+| GitHub Repository | Published |
+
+## Future Development
 
 Potential future extensions include:
 
@@ -356,7 +360,8 @@ Detection validation scenarios
 Security monitoring architecture documentation
 KQL query optimisation
 Additional MITRE ATT&CK coverage
-Portfolio Disclaimer
+
+## Portfolio Disclaimer
 
 This repository is a technical portfolio and lab environment.
 
@@ -364,7 +369,7 @@ The detection rules, hunting queries, and MITRE ATT&CK mappings are intended to 
 
 The presence of a detection or MITRE ATT&CK mapping does not indicate that malicious activity was actually observed.
 
-Author
+## Author
 
 Thabo Sakonta
 
