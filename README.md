@@ -428,7 +428,7 @@ The exact telemetry source may vary depending on the detection or hunting scenar
 
 ---
 
-* Expanded detection validation scenarios
+## Detection Validation
 
 Detection and hunting content is designed for validation against representative Windows security telemetry and simulated Home Lab scenarios.
 
